@@ -1,0 +1,274 @@
+Hello, everyone.
+And welcome to task number seven in this task.
+Let's go ahead them understand the Siri and intuition
+behind recurrent neural networks and l s t m as well.
+If you guys remember in task number six, we have been able
+to perform some pre processing to the data.
+We divided the data into training and testing, and then
+we token eyes the data and we did padding as well to make
+sure that all the data is within the same lens.
+So let's go ahead and understand the city and intuition
+behind the equipment your networks.
+So if you guys remember, if in previous couple off guided
+projects And if you guys took any machine learning course per
+se before you will find that here we had our feet forward.
+Artificial neural network, this what we call it Vanilla
+networks and the essentially map inputs to outputs.
+So we have bunch of inputs when a bunch of outputs
+and we have basically all the neurons here are connected,
+fully connected toe all the neurons in the subsequent layer.
+Okay, and the data simply propagates from the left hand side
+to the right hand side, and that's it a major drawback when
+it comes to feet forward artificial neural networks
+that they don't have any time dependency or some sort off
+memory effect.
+Think of this as kind of, you know, like a massive,
+you know, nonlinear equation.
+We have your feeding independent variables, generates
+dependent variables, and that's it.
+You feed it an ex agent.
+It's why, and it's only 1 to 1 mapping.
+There is no dynamics in there.
+There is no time dependency, and we don't even remember what
+happened in the past, for example, and that's why we call
+them again very basic networks.
+And that's where the power off recurrent neural networks
+comes into play so it couldn't be.
+A network is a type of artificial neural networks
+that is designed to take Tim Portal Dimension
+into consideration by having what we call it a memory effect
+or internal state.
+So essentially here I have my inputs.
+Here I have bunch of neurons and again the same deal
+as we have done here in the feet forward, your network is
+that again we do all the matrix, multiplication and all that.
+But there is an additional very important key point is
+that here the output is being fed back as an input.
+So now I have more dynamics that could be captured
+within recruited your networks.
+So the help it not only it will depend on the input, but it
+will also depend on what happened in the previous time stamp
+in the in the past.
+So now I have some sort of memory effect that's captured
+in there.
+Okay, so it's captured kind of, you know, a little bit more
+details when it comes to the couldn't you know, networks.
+So any kind of your networks, as I mentioned, contained
+in temporal loop, in which the hidden layer not only gives
+an output, but it feeds itself as well.
+So here I have my inputs, X here I have my outputs
+and you feeding the input, and there is here what we call it
+some sort of a memory effect.
+So now I will take the output from this layer and feeding him
+back along with my input, and that will affect the next
+output in the next time step.
+So an extra dimension is added essentially, which is time.
+And they couldn't hear.
+A network can recall what happened in the previous time
+stamps, so it was great with sequences off text.
+So if you guys take a look at this and if you try to unfold
+it over time So now I have the time here on the x axis.
+And essentially now I have what's happening in the time Step
+T here I have what happened in the time step T minus one.
+And here I have.
+What happened?
+What's gonna happen in times that t plus one?
+So as you guys notice what's gonna happen, for example, At T
+plus one depends on the input.
+And depends also on what happened in the previous time stamp.
+And that's why we feed envy here.
+Um, which is essentially.
+So now, basically, the output okay, would be function off
+the input and function off.
+What happened a time Step teeth in the same deal here, the
+hope it a time step t will be function off.
+What happened is as an input right now at T, which is X t
+and it also function off what happened in the previous time
+step, which is ht minus one.
+And that's what we have here as we Okay, so the question is
+what makes recurrent neural networks so special.
+So one of the major, I would say drawbacks when it comes
+to feet forward, artificial your networks, if that they are
+so rigid they are so constrained, were basically we have just
+fixed number of inputs, fixed number of outputs, and that's
+it. That's all what we have, even when we kind of trained
+like a convolution and new network.
+Or maybe like a rez net network.
+These are yes, they're complex networks, but they don't have
+again any time dependency.
+The imports are fixed.
+We know the exact same size of the input image,
+and the output will be maybe, like a class or or maybe like a
+like a site segmented, for example, output.
+But that's it fixed size for the input and fixed side
+of the output as well.
+So, for example, if you have the CNN that would have the
+fixed size image maybe 28 by 28 it will generate a fixed
+output.
+We'll call the classes or probabilities and feet forward
+or fish in.
+Your networks essentially have a fixed configuration,
+and again it has the same number of hidden layers and weeks,
+and that's where recurrent new networks actually offer a huge
+advantage over feet forward.
+Vanilla artificial Your networks.
+Why? Because now you can have a lot more freedom when
+it comes to the size off the imports and size
+of the outputs, because now we have time dependency as well.
+So, for example, I can have a sequence of inputs, maybe have
+sequence and outputs.
+Well, maybe I have sequence in both, which is super powerful.
+So let me elaborate a little bit on that.
+Let's take a look at again couple of applications when
+it comes to reconnect the other networks so you guys can
+appreciate it a little bit more.
+Please note that here there is a lot of, um, there's really,
+like, powerful source.
+And here it's basically by Andrei Karpov.
+It's actually the powerful link.
+Please go ahead and check it out and hear what we have is
+first, we can maybe have one work what we call it,
+1 to 1 or vanilla kind of mapping, for example.
+I have an image and have an output, and they'll be the class
+and that's it.
+You take in the image and here we have the output
+and that would be 1 to 1 mapping you can use It may be
+for for regression applications and classifications asks
+to another way of looking at it.
+Maybe we can have many too many, which is mean, which means
+I have sequence of inputs and sequence of Alberts,
+for example, like Google translate.
+I can now have, for example, against sequence off letters,
+Let's say in English and here I have letters, for example,
+in French or Arabic.
+And then you can leverage the clinic new networks to do
+that because now we can feed in cedars of texts
+and or sequence of text, and then sequence off text as well
+will be generated in the open.
+Another way of looking at it.
+Maybe another application is one too many, which means now I
+can have an image of the cat, for example, and then I can
+maybe caption that image so I can feed it in an image.
+And then the output might be, let's say, cute gray and white
+cat, for example.
+And then the last one is what we call the many toe one.
+So, for example, I can feed it in sequence like that, maybe
+like I'm really enjoying the scores and then the output
+will be one.
+Output only will be basically like a class kind of you know
+what we call it?
+Set? Perform sentiment, analysis.
+So, for example, when you're feeding this text, the output
+might be one or zero, depending on if the review,
+for example, it's positive.
+All negative.
+Okay, So I hope you guys who are able right now to kind
+of appreciate the power of recurrent your networks
+because again, you can use it here and leverage it to do
+many, many applications.
+You won't be able to do otherwise when you train just a feet
+forward.
+Artificial neural network.
+Okay, So the question is, what are the challenges when
+it comes to recurrent Muna network training?
+So in order to answer that problem, I need to cover
+the basics off Grady and Descent algorithm.
+Ingredient descent essentially is an optimization algorithm
+that is used to optimize the values off the weights
+and biases in any artificial neural network.
+And what we do is that we try to formulate a cost function
+and we want to minimize the cost function.
+And in order to do that, we wanted to calculate ingredient.
+So essentially, let's assume that, for example, I am standing
+right there.
+So I have values for weights and biases, and I'm here,
+for example, at this point, all what I want to do is I wanted
+to calculate the Grady INT, which is the first derivative
+at this point, and then I wanted to move in the negative
+direction of the ingredients, so I want to move down.
+And that's where the term Grady in dissent.
+So I actually keep going down, down, down, down
+until it reached the point where I was able to minimize
+the cost function.
+And essentially, that would be the optimal values of weights
+and biases that will minimise the output.
+Better and again.
+You can look at it from top, so if you start somewhere
+in here, you can keep kind of reducing.
+I would say the error until you reach a point where you stop
+the training and that's it, that we have the optimized values
+for weights and vices.
+So what we do here, essentially, if that we can again
+calculate ingredients and we want to move in the negative
+direction and the problem when it comes to training off
+recurrent neural networks specifically is related to the
+that Grady Int operation.
+So let's go ahead and elaborate on this a little bit more so.
+One of the major issues when it comes to training
+of recurrent your networks is what we call it the vanishing
+radium problems.
+So attrition, your networks radiance are calculated
+during back propagation.
+So in back propagation, what we do that we essentially
+calculate the derivative off the network by moving
+from the outermost layer, which is one that is close
+to the output moving back to the initial layer.
+So what we do that again?
+We have our ground truth, which is our labels the network
+will generate predictions, will calculate the error signal,
+and then we're gonna think the error and try to go back
+and update the weights.
+So what we do here, essentially, that we do what we apply,
+what we call it the chain rule.
+So the chain rule is used during this calculation in which
+the derivative from the final layers are multiplied
+by the derivative from early layers.
+So let's take a look at an example.
+So, for instance, what we do in here is that maybe
+let's assume that we have detected ingredient and ingredient.
+Maybe it's like 0.1 value, for example, and because we apply
+the chain rule.
+So if we, for example, a multiply 0.1 times 0.1 times
+0.1 and we keep doing that, you will find that what something
+or phenomena that takes place, Which is what's called
+the vanishing great.
+An issue in which the Grady in becomes too small.
+And when the greedy in becomes too small, you're essentially
+going to stop the training.
+You're not gonna be updating the weights anymore.
+And that's what happened here when you train the deep
+networks, specifically recurrent neural networks.
+So what we get what we have in here is where we do the we get
+the old weights and then we take calculated radiant
+and we multiply that by the learning rate, which is how
+aggressive do you want to update your weights?
+And then you use their to Jeanette in you Wait.
+So, for example, if my old weight is, let's say, 10.1,
+and the learning rate maybe is one, and the Grady Int,
+for example, is opened or one you will essentially do
+the calculation and that will generate another new weight,
+which is 9.999 But if the great aunt is too small again
+because here we have deep network.
+And because we are doing all the chain rule calculations
+in which the great and keeps dimension, you will find
+that you are not gonna be updating the weights anymore.
+Now you can essentially, Actually, I think I have an example
+here for you guys.
+So, for example, you can multiply 0.1 times 0.1 times
+0.1 that will generate one problem.
+I understand.
+You think that you go here, you try to obey the old weights.
+You're not gonna be generating any new weights essentially.
+So that means the training would be very, very poor.
+And that's one of the major challenges and issues when
+you train recurrent your networks.
+And that's why who will try to overcome this issue with has
+test number eight by leveraging while Call it L S D M
+networks.
+And these are long, short term memory networks on their super
+powerful, and they will work like magic.
+So that's all I have for task number seven.
+I hope you guys enjoyed it in test number eight.
+Let's go ahead and understand LSD and networks.
+Please stay tuned and they will see you guys in the next
+lecture.

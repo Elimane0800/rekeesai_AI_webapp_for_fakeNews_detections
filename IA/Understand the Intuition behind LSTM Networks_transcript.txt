@@ -1,0 +1,160 @@
+Hello, everyone.
+And welcome to task number eight in this task, let's go ahead
+and understand the intuition behind long short term memory
+or L S t m networks for short.
+You guys remember in past number seven, we have been able
+to understand the intuition behind the recurrent neural
+networks.
+We learned about the architecture off those.
+How does it work?
+And we also cover a lot of applications that makes recurrent
+your networks so special, which is essentially here.
+We learned that we can kind of leverage the, um, recurrently
+networks to do 1 to 1 mapping to maybe do sequence too many
+too many or do one too many or do many to one as well.
+We also covered one of the issues that comes along
+with recurrent neural networks, which is what we call the
+vanishing radiant problem.
+And we will try to overcome this issue using LSD and networks.
+Okay, so let's get started.
+So LSD and networks work better compared to the vanilla
+recurrent new your network since the overcome the vanishing
+radiant problem.
+So I've actually worked with recurrent your networks back
+around 2000 and 9 2010 timeframe and we have noticed that
+the performance of these recurrent in your networks, where I
+would say good as long as you have the basic, um, data set.
+But once you have a little bit mawr kind of advanced data set
+when you have a little bit more deep network and then when
+you have many neurons and many layers, you will find that
+the training of these networks it is they just trained really
+well initially.
+And then at some point afterwards, you just you don't learn
+anymore.
+And that's essentially because of the vanishing, radiant
+issue that we discussed before.
+And that's where the LSD and Network can overcome this issue.
+So in practice, recurrent neural networks failed to establish
+what we call it long term dependency.
+So let's take a look at an example.
+Let's assume that I have a very simple data set like here.
+I have, for example, that three color is green.
+Okay, you will find that here the recurrent neural networks
+perform well since the gap between the prediction green
+and the necessary contacts information tree is small.
+So basically what we have in here, we're trying to train
+a recurrent mirror network to make a prediction
+for the missing world in here.
+So we take the network, we feed it in, the three color is
+and then we want to see what with the network.
+Predict.
+Okay. So basically, if you have a very simple text
+like that, you will find that the network will do ok, will do
+well, Why?
+Because the distance between the prediction which is green,
+and the actual context which is kind of the tree,
+the distance between the two is not too far.
+So the gap is not too far.
+So you will find that the actual network will do will do well
+when you have a simple data set in here.
+In this example.
+However, if you have a little bit more complex one like that
+like I live in Quebec, in northern Canada, where I live,
+the weather is generally cold and I'm trying to predict
+this sentence.
+So when you do that, you will find that the recurrent neural
+network, just a vanilla one, will perform really poor.
+When the gap between the prediction, which is called the word
+that I'm trying to predict, and the context which is
+essentially Canada is Lord all right, so L s t M networks are
+type of recurrent, you know, networks that are designed
+to remember long term dependencies by default.
+Simply put, what we try to do is we keep what we call it
+a memory.
+Okay, So what we do is that we have that horizontal line
+in here and they represent the memory or what we call it
+the Cell state, and that enables l s t m.
+To remember very, very old information.
+Actually, if you think about it, the actual concept is pretty
+simple.
+It's pretty straightforward.
+Essentially, if you in the vanilla, reconnecting the network
+because when we have more layers, you try.
+You tend to forget what happened initially to overcome that.
+I'm just gonna keep it, you know, moving forward.
+They're just gonna keep that memory cell in here, and I
+will keep this line, just keep going.
+And that's essentially the kind of from a very high level how
+LSD M Network tried to remember the long term dependencies
+by default.
+And but we're going to do here that will try to regulate
+the actual amount of information that is being remembered
+to regulate the amount of information that goes in as
+an input, and we're also going to regulate the amount
+of information that goes out as well as an output.
+So let's dig a little bit deeper into that.
+Okay? So here I have the actual architectural off, the LSD em.
+So l s t m contains serious off gates that can allow or block
+information from passing by.
+So, as you guys can see here, you will find that these excess
+here, these are gates.
+So essentially think of this as a valve.
+Okay, so you have water that is flowing in the valve and you
+can hear by turning down.
+By turning this knob, you would be able to either allow
+the information to flow or block the information, so I
+can think of this this way.
+So now I have this X in here.
+So now I have a valve in here, and now I can control
+the amount of information that goes through that valve using
+this gate in here.
+Think of this as kind of, you know, value.
+It's a sigmoid output.
+Essentially, that ranged between zero and one.
+So if you said this value to zero, that means you don't allow
+any data to flow.
+And if you said it to one, that means you want to say, Okay,
+go ahead and allow everything to flow.
+So now I can have kind off kind of regulation over the amount
+of information that we keep from the past.
+And that's why this gate, the first gate in the LSD
+of network, we call it Forget gate, OK?
+Because we're trying to essentially control the amount
+of information that it will remember or forget
+from the previous task.
+And that's why here I have C T minus one, which is
+essentially what happened in the previous time.
+Step T minus one.
+Okay. All right.
+So that's the first gate we call it.
+Forget Gate.
+In the same idea, we have what we call it implicate.
+Now I need to control the amount off input information.
+So if I have X t here as an input, okay.
+And again, I have my same gates and I need to have a valve
+that control that gate.
+That's what I have in here.
+So I would be able to essentially feeding in the input X
+and regulate the amount of input that I need to be added
+to my memory to generate the new memory, which a city and so
+now integrated the input as well.
+Now let's go ahead and regulate the output, which is
+essentially makes sense.
+So now I again I have my gate.
+We call it the Output Gate, and it's also controlled again
+by sigmoid value that range between zero and one.
+And there will regulate the amount that I'm going to generate
+here in the output, which is HD.
+That's again from a very, very high level.
+Obviously, there's a lot of details, a lot of mass,
+but that's what l s t M networks actually work.
+So what we have is that we have our memory information,
+and that would help us overcome the vanishing grading issues.
+And we also need to regulate or control the amount
+of information that goes in.
+We need to control the amount of memory information and when
+it also regulate the amount of output information at all.
+Right. So that's all I have for this task.
+I hope you guys enjoyed it in test number nine.
+We're going to go ahead and build and train our model.
+Please stay tuned and I will see you guys in the next lecture.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ajout de jQuery pour faciliter les requêtes AJAX -->
+    <script src="/Static/webscript.js"></script> <!-- Assurez-vous que le chemin vers votre script JavaScript est correct -->
+    <style>
+        .center-heading {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                <h1 class="center-heading">Fake News Detector</h1> 
+                <div class="form-group">
+                    <label for="textToAnalyze">Enter the text to analyze</label>
+                    <textarea class="form-control" id="textToAnalyze" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button onclick="RunFakeNewsDetection()" class="btn btn-primary">Analyze</button>
+                </div>
+                <div id="system_response" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
